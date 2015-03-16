@@ -1,0 +1,9 @@
+env = Environment()
+env.Append(CPPFLAGS="-pthread -std=c++0x")
+libraries=['pthread']
+
+bin_name = 'main'
+src_list = ['func_thread.cc']
+
+env.Program(bin_name, src_list, LIBS=libraries)
+

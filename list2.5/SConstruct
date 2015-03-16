@@ -1,0 +1,10 @@
+env=Environment()
+env.Append(CPPFLAGS=['-pthread', '-g', '-std=c++0x'])
+
+libraries = ['pthread']
+import os
+for file in os.listdir('.'):
+    if file[-3:]=='.cc':
+        bin_name = file.split('.')[0]
+        src_list = [file]
+        env.Program(bin_name, src_list, LIBS=libraries)

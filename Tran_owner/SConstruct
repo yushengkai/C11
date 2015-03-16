@@ -1,0 +1,8 @@
+env=Environment()
+env.Append(CPPFLAGS=['-g','-pthread', '-std=c++0x'])
+
+libraries=['pthread']
+
+bin_name = 'tran_owen'
+src_list = ['Tran_owen.cc']
+env.Program(bin_name, src_list, LIBS=libraries)

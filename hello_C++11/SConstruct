@@ -1,0 +1,4 @@
+env = Environment()
+libraries=['pthread']
+env.Append(CPPFLAGS='-pthread -std=c++0x' )
+env.Program("scons_out","hello_concurrent.cc",LIBS=libraries)

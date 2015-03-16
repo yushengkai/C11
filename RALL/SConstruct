@@ -1,0 +1,11 @@
+env = Environment()
+
+env.Append(CPPFLAGS=['-pthread', '-std=c++0x'])
+
+libraries = ['pthread']
+
+bin_name = 'thread_guard'
+
+src_list = ['thread_guard.cc']
+
+env.Program(bin_name, src_list, LIBS = libraries)

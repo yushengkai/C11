@@ -1,0 +1,7 @@
+env=Environment()
+env.Append(CPPFLAGS=['-std=c++0x','-pthread','-g'])
+libraries = ['pthread']
+
+bin_name = 'pass_arg'
+src_list = ['pass_arg.cc']
+env.Program(bin_name, src_list, LIBS=libraries)
